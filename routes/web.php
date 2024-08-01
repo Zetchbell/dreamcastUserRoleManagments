@@ -15,5 +15,5 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', [UserController::class, 'index']);
-Route::get('/users/data', [UserController::class, 'getData'])->name('getUserData');
-Route::post('/saveUserData', [UserController::class, 'saveUserData'])->name('user.saveUserData');
+//
+//

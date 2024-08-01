@@ -170,13 +170,13 @@ $(document).ready(function () {
                         processData: false,
                         contentType: false,
                         success: function(response) {
-                            $('#formErrorDiv').html('');
+                          $('#formErrorDiv').html('');
                            if(response.status == 1){
                             loadUsers();
+                            $('#userManagementForm').get(0).reset();
                            }else{
                             alert(response.message);
-                           }
-                           
+                           }                           
                         },
                         error: function(xhr) {
                             console.log('Error:', xhr);
@@ -188,6 +188,7 @@ $(document).ready(function () {
                                 });
                             });
                             $("body").scrollTop();
+
                         }
                     });
 
