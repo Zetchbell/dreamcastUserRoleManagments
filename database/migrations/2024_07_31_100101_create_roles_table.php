@@ -18,6 +18,13 @@ class CreateRolesTable extends Migration
             $table->string('name')->unique(); // Ensure there's a unique 'name' column
             $table->timestamps();
         });
+        
+        DB::table('roles')->insert([
+            ['name' => 'superadmin', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'admin', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'subadmin', 'created_at' => now(), 'updated_at' => now()]
+        ]);
+
     }
 
     /**
